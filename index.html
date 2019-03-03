@@ -4,16 +4,15 @@
 <body>
 <form id="frm1" action="/action_page.php">
   Reisenummer: <input type="text" name="cruise"><br>
-  <br>
   <input type="button" onclick="findCruise()" value="GO">
 </form>
 
 
   <script>
     function findCruise() {
-    var cruise = document.getElementById("frm1").submit();
+    var cruise = document.getElementById("frm1").value;
     }
-   alert("completed");
+   alert(cruise);
   </script>
 
 
