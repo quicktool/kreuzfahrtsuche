@@ -3,7 +3,8 @@
   <script>
     function findCruise(url) {
     var url = "https://www.cunard.com/de-de/kreuzfahrt-finden/";
-    var cruise = prompt("Reisenummer:");
+    // var cruise = prompt("Reisenummer:");
+    var cruise = document.getElementById("kreuzfahrt").value;
     cruise = cruise.toUpperCase();
     url = url + cruise + "/" + cruise;
     window.open(url, '_blank');
@@ -12,9 +13,9 @@
   </script>
 
 <body>
-
-  Kreuzfahrtsuche: <input type="button" onclick="findCruise()" value="GO">
-
+  
+  Kreuzfahrtsuche: <input type="text" id="kreuzfahrt" name="kreuzfahrt"/>
+  <input type="button" onclick="findCruise()" value="GO">
 
 </body>
 
